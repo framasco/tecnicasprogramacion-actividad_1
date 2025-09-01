@@ -1,5 +1,3 @@
-Conversación ChatGPT: https://chatgpt.com/share/68b62526-b35c-8005-a312-5cf36e24c018
-
 # Problema 3: Acceso a un parque de diversiones
 
 Queremos que un programa decida si una persona puede acceder a un parque de 
