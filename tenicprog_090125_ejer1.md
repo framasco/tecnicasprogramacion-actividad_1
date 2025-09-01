@@ -1,108 +1,102 @@
-Conversación ChatGPT : https://chatgpt.com/share/68b62526-b35c-8005-a312-5cf36e24c018
+Tarea de Técnicas de Programación
+1. Introducción: Variables y tipos de datos en Python
+Una variable es un nombre que apunta a un valor almacenado en la memoria. En Python, las variables son de tipado dinámico, lo que significa que no necesitas declarar su tipo; el intérprete lo infiere automáticamente al asignar un valor.
 
-1) Introducción — ¿qué es una variable y tipos básicos en Python?
-Una variable es un nombre que apunta a un valor almacenado en memoria. En Python las variables son dinámicamente tipadas: no declares el tipo al crearla, el intérprete lo infiere por el valor asignado.
-Tipos básicos importantes:
+Los tipos de datos básicos que utilizaremos son:
 
-str — cadena de texto (p. ej. "Hola").
-int — enteros (p. ej. 42).
-float — números con decimales (usa punto: 1.75).
-bool — booleano: True o False.
-list — lista ordenada y mutable: colección de valores [a, b, c].
+str (string): Para texto (ej. "Hola Mundo").
 
-2) Proceso y decisiones
+int (integer): Para números enteros (ej. 42).
 
-Decisiones tomadas para cada variable del enunciado:
-nombre → str: representa texto (nombre propio).
-edad → int: número entero sin decimales.
-altura → float: altura requiere decimales; usar punto (1.75), no coma.
-es_estudiante → bool: verdadero/falso para estado.
-materias → list: varias materias en orden, posibilidad de modificar (agregar/quitar).
+float: Para números con decimales (siempre usando un punto, ej. 1.75).
 
-Errores comunes:
-Escribir 1,75 — en Python eso crea una tupla (1, 75) o provocará comportamiento inesperado; use 1.75.
-Usar nombres de variables que empiezan con número o con espacios: inválido (1edad no OK).
-Usar palabras reservadas (class, def, if) como nombre de variable.
-Confundir comillas simples y dobles no es crítico ('a' = "a"), pero mantener consistencia.
+bool (boolean): Para valores de verdad (True o False).
 
-Convenciones:
-snake_case para nombres: es_estudiante, lista_materias.
-Si el valor puede ser desconocido inicialmente, usar None (tipo NoneType) y documentarlo.
+list: Para colecciones ordenadas y mutables de valores (ej. ["a", "b"]).
 
-3) Código en Python (minimal y correcto), con comentarios línea por línea
+2. Proceso y decisiones
+Elección de tipos de datos
+Para cada variable solicitada, se eligió el tipo de dato más adecuado:
 
-# Datos del alumno: declaración de variables con tipos básicos
+nombre → str: Representa texto.
 
-nombre = "Francisco Ramasco"   # str: nombre completo como texto
-edad = 35                      # int: edad como número entero
-altura = 1.75                  # float: altura en metros; usar punto decimal
-es_estudiante = True           # bool: True si es estudiante, False en caso contrario
-materias = ["Programación I", "Matemática", "Redes"]  # list: lista ordenada de materias
+edad → int: Número entero sin decimales.
 
-# Comprobación opcional (muestra tipo y valor) - útil para depurar
-print(type(nombre), nombre)
-print(type(edad), edad)
-print(type(altura), altura)
-print(type(es_estudiante), es_estudiante)
-print(type(materias), materias)
+altura → float: Requiere decimales.
 
+es_estudiante → bool: Representa un estado binario (verdadero/falso).
 
-4) Explicación de tipos con ejemplos adicionales (y por qué son útiles)
+materias → list: Es una colección de elementos que puede cambiar (se pueden agregar o quitar materias).
 
-str (cadena)
+Errores comunes y convenciones
+Separador de decimales: Se usó el punto (.) en la variable altura. Un error común es usar la coma (,), lo que Python interpreta como una tupla, no como un número decimal.
+
+Nombres de variables: Se usó la convención snake_case (es_estudiante) para mejorar la legibilidad del código y se evitaron nombres que empiecen con números o usen palabras reservadas de Python.
+
+3. Código en Python
+A continuación, se presenta el código minimalista y correcto, con comentarios explicativos.
+
+# 1. Declaración de variables con tipos básicos.
+
+nombre = "Francisco Ramasco"    # str: Almacena el nombre completo.
+edad = 35                      # int: Almacena la edad como un número entero.
+altura = 1.75                  # float: Almacena la altura usando punto decimal.
+es_estudiante = True           # bool: Indica si la persona es estudiante (True) o no (False).
+materias = ["Programación I", "Matemática", "Redes"]  # list: Colección de las materias que cursa.
+
+# 2. Comprobación opcional del tipo y valor de las variables.
+print(f"Tipo: {type(nombre)} -> Valor: {nombre}")
+print(f"Tipo: {type(edad)} -> Valor: {edad}")
+print(f"Tipo: {type(altura)} -> Valor: {altura}")
+print(f"Tipo: {type(es_estudiante)} -> Valor: {es_estudiante}")
+print(f"Tipo: {type(materias)} -> Valor: {materias}")
+
+4. Explicación de tipos con ejemplos adicionales
+str (string): útil para representar cualquier dato de texto, como mensajes o descripciones.
+
 Ejemplo: saludo = "Hola, " + nombre
-Uso: representar texto, concatenarlo, formatearlo. Utile para mostrar mensajes al usuario.
-int (entero)
-Ejemplo: años_para_100 = 100 - edad
-Uso: contar, índices, operaciones aritméticas sin decimales.
-float (decimal)
-Ejemplo: altura_mas_ajuste = altura + 0.05
-Uso: medidas, promedios, cálculos que requieren fracciones. Usar punto para decimales.
-bool (booleano)
+
+int (integer): útil para operaciones aritméticas sin decimales, como contadores o índices.
+
+Ejemplo: años_restantes = 100 - edad
+
+float: útil para medidas, promedios y cálculos que requieren precisión decimal.
+
+Ejemplo: altura_nueva = altura + 0.05
+
+bool (boolean): fundamental para la lógica de los programas, permitiendo tomar decisiones en base a condiciones.
+
 Ejemplo:
+
 
 if es_estudiante:
     print("Está cursando la tecnicatura")
-else:
-    print("No es estudiante")
-# Uso: decisiones, condiciones, filtros.
+list (lista): ideal para colecciones de datos ordenadas y mutables.
 
-
-list (lista)
 Ejemplo:
 
-primera_materia = materias[0]     # acceso por índice (0 es el primero)
-materias.append("Algoritmos")     # agregar una materia al final
-# Uso: colecciones ordenadas y mutables — ideal para conjuntos de materias, notas, etc.
 
-5) Paso a paso seguido (documentación del proceso)
+# Acceso a un elemento por su posición (índice 0)
+primera_materia = materias[0]
+# Agregar un elemento a la lista
+materias.append("Algoritmos")
 
-Leer el enunciado y mapear cada dato a un tipo lógico (texto, número entero, número decimal, booleano, colección).
-Elegir nombres de variables descriptivos y en snake_case.
-Elegir valores ejemplo realistas (edad como entero, altura con punto decimal).
-Escribir declaraciones mínimas en Python.
-Añadir comentarios explicativos por línea (documentación).
-Probar con print() y type() para verificar tipos.
-Documentar decisiones y errores comunes (puntos 2 y 6).
+5. Paso a paso del proceso
+Mapeo: Identifiqué cada dato de la consigna y lo asocié a un tipo de variable lógico.
 
-6) Debate / decisiones y alternativas consideradas
+Codificación: Escribí las declaraciones de las variables con valores realistas.
 
-Alternativas y por qué no las elegí por ahora:
-tuple en vez de list para materias: si las materias no se van a modificar, tuple (("Prog", "Mat")) ofrece inmutabilidad. Elegí list porque suele ser práctico agregar/quitar materias en ejercicios iniciales.
-Usar None como valor inicial si no se conoce la información: p. ej. altura = None. Esto requiere comprobaciones antes de usarlo. No lo usé porque el enunciado pide declarar valores concretos.
-Type hints: nombre: str = "..." (opcional). Es útil para documentación y herramientas (linters/IDE), pero no es obligatorio en Python.
-Estructura más compleja: usar dict o dataclass para agrupar todos los atributos del alumno:
+Documentación: Añadí comentarios en el código y explicaciones detalladas en el texto.
 
-alumno = {"nombre": "...", "edad": 35, "altura": 1.75, "es_estudiante": True, "materias": [...]}
-# Esto es útil cuando manejas muchos alumnos, pero la consigna pide declarar variables sueltas para aprender tipos básicos.
+Verificación: Usé la función type() para confirmar que las variables almacenan los tipos de datos correctos.
 
-Decisiones prácticas:
-Mantener el ejemplo simple para centrarse en la comprensión de tipos.
-Documentar el uso de punto decimal y problemas comunes.
+6. Debate y alternativas
+Se consideraron otras estructuras de datos como tuple (inmutable) o dict (diccionario) para agrupar los datos. Si bien un dict es útil para representar un único alumno con todos sus atributos, la consigna pedía declarar variables separadas para enfocarse en los tipos de datos básicos individualmente. Esto ayudó a mantener el ejemplo simple y pedagógico.
 
-7) Conclusiones / aprendizajes
+7. Conclusiones y aprendizajes
+Esta actividad me permitió reafirmar que las variables son esenciales para almacenar información y que la elección del tipo de dato es crucial para el correcto funcionamiento del programa. Los errores comunes, como el uso de la coma en lugar del punto, resaltan la importancia de prestar atención a la sintaxis del lenguaje. El uso de nombres descriptivos y la documentación con comentarios son buenas prácticas que mejoran la calidad del código.
 
-Las variables son etiquetas para valores; Python infiere su tipo.
-Conocer y elegir el tipo correcto evita errores y facilita operaciones posteriores.
-Errores típicos iniciales: usar coma en lugar de punto para floats, nombres inválidos, y confundir mutabilidad.
-Practicar con type() y operaciones sencillas (concatenación, operaciones aritméticas, append en listas) ayuda a consolidar conceptos.
+8. Transcripción del chat
+(Enlace a la conversación de ChatGPT)
+
+Esta conversación fue utilizada como punto de partida para generar la estructura inicial del documento, que luego fue revisada, ampliada y adaptada para cumplir con los requisitos específicos de la consigna.
