@@ -1,3 +1,5 @@
+# Conversación ChatGPT : https://chatgpt.com/share/68b62526-b35c-8005-a312-5cf36e24c018
+
 Tarea de Técnicas de Programación
 1. Introducción: Variables y tipos de datos en Python
 Una variable es un nombre que apunta a un valor almacenado en la memoria. En Python, las variables son de tipado dinámico, lo que significa que no necesitas declarar su tipo; el intérprete lo infiere automáticamente al asignar un valor.
