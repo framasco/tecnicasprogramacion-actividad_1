@@ -1,3 +1,4 @@
+
 # Problema 3: Acceso a un parque de diversiones
 
 Queremos que un programa decida si una persona puede acceder a un parque de 
